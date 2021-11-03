@@ -1,0 +1,78 @@
+html {
+  -webkit-touch-callout:none;
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+body {
+  -webkit-touch-callout:none;
+  user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  margin:0;
+  font-family: 'jagfig','직지고딕';
+  color:white;
+  font-size: 12px;
+}
+#container {
+  background-image:url("../background/img_1.png");
+  display:flex; 
+  position:fixed;
+  height:100%;
+  width:100%;
+}
+#b1{
+  background-color:transparent; 
+  position: absolute; 
+  height:100%; width:100%; 
+  border:0;
+}
+#b1>img{width:100%;}
+.crop{ 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  position:relative;
+  height:100%;width:100%;  
+  }
+.crop video{mix-blend-mode: screen;}
+.group{
+  display: grid; 
+  grid-template-columns: repeat(35, 1fr);
+  grid-template-rows: repeat(32, 1fr);
+  gap: 2px 2px; width:96%; height:96%;
+  position:absolute;
+} 
+.item{z-index: 2;}
+.item:nth-child(1),.item:nth-child(3),.item:nth-child(13),.item:nth-child(95),.item:nth-child(96),.item:nth-child(101),.item:nth-child(106),.item:nth-child(111) {grid-column: 24;}
+.item:nth-child(2),.item:nth-child(8),.item:nth-child(80),.item:nth-child(81),.item:nth-child(86),.item:nth-child(91) {grid-column: 31;}
+.item:nth-child(17),.item:nth-child(18) {grid-column: 1;}
+.item:nth-child(23) {grid-column: 6 / span 30;}
+.item:nth-child(25) {grid-column: 2 / span 34;}
+.item:nth-child(26),.item:nth-child(27),.item:nth-child(32),.item:nth-child(37),.item:nth-child(42),.item:nth-child(47),.item:nth-child(48),.item:nth-child(53),.item:nth-child(58),.item:nth-child(63) {grid-column: 3;}
+.item:nth-child(46),.item:nth-child(67),.item:nth-child(94){grid-column: 1 / span 35;}
+.item:nth-child(68){grid-column: 8 / span 2;}
+.item:nth-child(69),.item:nth-child(74),.item:nth-child(79){grid-column: 8;}
+.item{display:flex; align-items: center; align-content: center;}
+.item>img{width:100%;}
+.box_1{
+  position:relative;
+  display: flex; 
+  width:100%; height:100%;
+  mix-blend-mode: screen;
+  justify-content: center; 
+  align-items: center;
+  flex:1;
+  z-index:-1;
+}
+.box_2{
+  position:absolute;
+  display: flex; 
+  width:100%; height:100%;
+  mix-blend-mode: screen;
+  z-index:1;
+  margin:0;
+  padding:0;
+  flex:1;
+ }
+video{ width:100%;height:100%;flex:1;}
+#myVideoTag{display:flex; position:relative;flex:1;}
+#myVideoTag2{display:flex;position:absolute;flex:1; }  
